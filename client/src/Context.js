@@ -27,8 +27,6 @@ const reducer = (state, action) => {
 
 export const SwapiProvider = props => {
   const [state, dispatch] = useReducer(reducer, initState);
-  //   console.log(dispatch, 'disini dispatch');
-
   const val = { state, dispatch };
   return (
     <SwapiContext.Provider value={val}>{props.children}</SwapiContext.Provider>

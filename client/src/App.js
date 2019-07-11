@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, {useEffect, useContext } from "react";
 import { SwapiContext } from "./Context";
 import axios from "axios";
 import "./App.css";
@@ -34,9 +34,7 @@ function App() {
     });
     
     if (getLocal(state.page)) {
-      
-      console.log('udah ada');
-      dispatch({
+        dispatch({
         type: "FETCH_API",
         payload: {
           isLoading: false,
@@ -46,7 +44,6 @@ function App() {
       });
     } else {
       try {
-        console.log('keesini baruu', page, 'brp');  
         let { data } = await axios.get(`${baseURL}?page=${page}`);
         for (const person of data.results) {
           person.mass = +person.mass

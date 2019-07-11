@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { SwapiContext } from "../Context";
 
-export default function Table({ hitSwapi }) {
+export default function Table() {
   const { state, dispatch } = useContext(SwapiContext);
 
   const handleClick = obj => {
@@ -66,7 +66,7 @@ export default function Table({ hitSwapi }) {
             Previous
           </button>
         )}
-        <p className="pt-2"> Page {state.page} </p>
+        <p className="pt-1"> Page {state.page} </p>
         {state.page < state.data.count / 10 ? (
           <button
             onClick={() => handleClick({ type: "inc" })}

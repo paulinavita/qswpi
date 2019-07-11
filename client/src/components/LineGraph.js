@@ -11,7 +11,7 @@ export default function LineGraph() {
 
   return (
     <div>
-      {state.data.results && (          
+      {state.data.results && (
         <>
           <Graph
             className="default-font"
@@ -21,7 +21,6 @@ export default function LineGraph() {
             data={state.data.results}
             chart={lineChart}
           />
-          
         </>
       )}
     </div>
